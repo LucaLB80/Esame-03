@@ -1,0 +1,422 @@
+@import "variabili";
+@import "mixing";
+
+// colore Background
+%b {
+    @if $template==nativo {
+        background-color:$bg ;
+    }
+
+    @else if $template==secondario {
+        background-color:$bg_sec ;
+    }
+}
+//  colori
+%c {
+    @if $template==nativo {
+        color:$color;
+    }
+
+    @else if $template==secondario {
+        color:$color_sec ;
+    }
+}
+// colore Hover
+%h {
+    @if $template==nativo {
+        background-color:$bg-hover;
+    }
+
+    @else if $template==secondario {
+        background-color:$bg-hover_sec ;
+    }
+}
+
+@font-face {
+    font-family:Roboto ;
+    src: url('../Font/Roboto/Roboto-Bold.ttf');
+}
+
+*{
+    box-sizing:border-box ;
+    margin: 0;
+    padding: 0;
+}
+
+body{      
+      font-family: Roboto,sans-serif,Arial, Helvetica, sans-serif;   
+      img.bg{
+        position:fixed;
+        left:0;
+        top:0;
+        min-width:100%;
+        min-height:100%;
+        z-index:-100;
+      } 
+}
+
+//*BARRA DI NAVIGAZIONE*/-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10%;
+    @include impostaDim(100%,50px);
+    background-color: $bg_2; 
+    border-bottom: 1px solid #ffbb00;
+
+    // Stile base per piccoli schermi
+    padding: 10px;
+    flex-direction: column;
+    @include impostaDim(100%, auto);
+
+    // Media query per schermi da 375px a 480px
+    @media (min-width: 375px) and (max-width: 480px) {
+        padding: 20px;
+        @include impostaDim(100%, 130px);
+        flex-direction: column;
+
+    }
+    .menu{
+        font-weight: 300;
+        font-size: 18px;
+        margin-top: 20px;
+        text-decoration: none;
+        color: $color2; 
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        // Uniformare il menu per schermi da 375px a 480px
+        @media (min-width: 375px) and (max-width: 480px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        li{
+            display: inline-block;
+            padding: 10px;
+            a{
+                font-weight: 300;
+                font-size: 2em;
+                text-decoration: none;
+                color: $color2; 
+                transition: all .3s ease;
+                
+                &:hover{                   
+                   color:$color;
+                }
+
+                // Uniformare la dimensione del testo per il range di schermi
+                @media (min-width: 375px) and (max-width: 480px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }
+            
+        }
+    }   
+    div.button{
+        padding: 9px 25px;
+        @extend %b;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;   
+        margin-top: 15px;
+
+        @media (min-width: 375px) and (max-width: 480px) {
+            margin-top: 0px;
+            padding: 0px 20px;
+            border-radius: 5px;
+        }
+
+        &:hover{
+            @extend %h;
+        }
+
+        a{
+            font-size: 18px;
+            color:$color2;
+            text-decoration: none;
+
+            // Cambiare la dimensione del testo su schermi tra 375px e 480px
+            @media (min-width: 375px) and (max-width: 480px) {
+                font-size: 20px;
+            }
+        }
+    }  
+
+}
+//*HOME*/-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+img.logo{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -287px;
+   
+
+    @media (min-width: 375px) and (max-width: 480px) {
+        position: absolute;
+        display: none;  // Nascondere il logo per evitare sovrapposizioni
+        width: 110px;
+        margin: -159px 0 0 30px;
+    }
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 70px;
+    @include imposta-margin(6%,0px,100px,0px);
+    text-shadow: 10px 10px 10px #000000, 15px 15px 15px #565656;
+
+   @media (min-width: 375px) and (max-width: 480px) {
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(100px,13px,-30px,20px);
+        text-shadow: 10px 10px 10px #000000, 15px 15px 15px #565656;
+    } 
+}
+main{   
+    @include impostaDim(100%,auto);
+    @include imposta-margin(115px,0px,0px,0px);
+
+    @media (min-width: 375px) and (max-width: 480px) {
+        @include impostaDim(100%,auto);
+       
+    }   
+    .container-home{
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+        @include impostaDim(96%,210px);  
+        border-radius: 40px;
+        margin-left: 30px;
+
+        @media (min-width: 375px) and (max-width: 480px) {
+            justify-content: space-between;
+            flex-direction: column;
+            @include impostaDim(auto,1050px);     
+            @include imposta-margin(0px,0px,0px,0px);
+        } 
+        div{
+            @include impostaDim(150px,150px);
+            background-color: #2d2d2d7f;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 30px;
+            border: 2px solid white;
+            box-shadow: 10px 10px 10px #000000af;
+
+            @media (min-width: 375px) and (max-width: 480px) {
+                @include impostaDim(260px,150px);
+                line-height: 40px;
+                border-radius: 15px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 30px;
+            }
+            &:hover{
+                cursor: pointer;
+                background-size: cover;
+                background-position: center; 
+                object-position: bottom;
+                background-image: url('../Immagini/portfolio.jpg');
+            }
+            a{
+                color: $color2;
+                text-decoration: none;
+
+                @media (min-width: 375px) and (max-width: 480px) {
+                    font-size: 15px;
+                    position:absolute;
+                    @include imposta-margin(53px,0px,0px,-27px);
+                }
+                &:hover{
+                    -webkit-text-fill-color:$color2;
+                    -webkit-text-stroke: 1px rgb(0, 0, 0);
+                }
+            }
+        }
+        
+     }  
+}
+
+//*FOOTER*/-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+footer{
+    background-color:$bg_2;  
+    width: 100%;
+    margin-top: 120px;
+
+    @media (min-width: 375px) and (max-width: 480px) {
+        @include imposta-margin(75px, 0, 0, 0);
+        @include impostaDim(100%, 80%);
+
+        border-top: 1px solid #ffbb00;
+
+
+    }
+    .container{        
+        margin: 60px;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 375px) and (max-width: 480px) {
+            @include imposta-margin(20px, 0, 0, 0);
+        }
+
+        .footer-contenuto{
+            @include impostaDim(33.3%,100px);
+            margin-top: 49px;
+
+            @media (min-width: 375px) and (max-width: 480px) {
+                @include impostaDim(100%, 158px);
+                @include imposta-margin(5%, 0, 0, 0);
+            }
+
+            #contact{
+                font-size: 28px;
+                margin-bottom: 15px;
+                text-align: center;
+                color: $color2;
+
+               @media (min-width: 375px) and (max-width: 480px) {
+                    margin: -10% 0 0 -3%;
+                    padding: 3%;
+                    
+                }
+            }
+
+            p{
+                width: 180px;
+                margin: auto;
+                padding: 7px;
+                font-size: 15px;
+                color: $color2;
+            }
+            // .contact{
+            //     list-style-type: none;
+            //     margin: auto; 
+            //     font-size: 18px;
+                
+            //     li{
+            //         padding: 6px; 
+                     
+                
+            //         a{
+            //             text-decoration: none;
+            //             cursor: text;
+            //             color: $color2;
+            //             width: 180px;
+                        
+            //         }
+            //     }
+            
+            // }
+
+            ul{
+                text-align: center;
+                padding: 5px;                
+            }
+        }    
+        .footer-contenuto_1 {
+            @include impostaDim(33.3%, 100px);
+            margin-top: 49px;
+            // Nascondere l'intero contenuto nella media query
+            @media (min-width: 375px) and (max-width: 480px) {
+                display: none;
+            }
+            #list{
+                font-size: 28px;
+                margin-bottom: 15px;
+                text-align: center;
+                color: $color2;
+
+                @media (min-width: 375px) and (max-width: 480px) {
+                    margin: -10% 0 0 -3%;
+                    padding: 3%;
+                    
+                }
+            }
+            ul.list{
+                width: auto;
+                text-align: center;
+                list-style-type: none;
+                padding: 38px;
+                position: relative;
+                top: -10px;
+                a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    color:$color2;
+                    &:hover{
+                        color: $color;
+                    }
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    left: 50%;
+                    top: 80%;
+                    @include impostaDim(0px, 2px);
+                    @extend %b;
+                    transition-duration: 0.5s;
+                }
+    
+                &:hover::before {
+                    width: 70px;
+                }            
+
+            }
+        }   
+        .footer-contenuto_2 {
+            @include impostaDim(33.3%, 100px);
+            margin-top: 49px;
+            // Nascondere l'intero contenuto nella media query
+            @media (min-width: 375px) and (max-width: 480px) {
+                display: none;
+            } 
+            .logo2{
+                position: relative;
+                left: 200px;
+                top: 40px;
+                width: 20%;
+            }
+        }
+    }
+
+    .bottom-bar{
+        @extend %b;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 105px; 
+
+        @media (min-width: 375px) and (max-width: 480px) {
+            @include imposta-margin(23px, 0, 0, 0);
+        }
+    }
+    a.privacy_policy {
+        display: inline;
+        font-size: 15px;
+        color:$color2;
+        text-decoration: none;
+        margin: 226px 0px 0px 0px;
+        cursor: pointer;
+        position: absolute;
+
+        @media (min-width: 375px) and (max-width: 480px) {
+            margin: 168px 0 0 0;
+        }
+            &:hover{
+                color: $bg-hover_sec;
+            } 
+
+    }
+        
+}
+
+
+
+    
