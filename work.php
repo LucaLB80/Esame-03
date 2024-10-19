@@ -59,8 +59,9 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
+    <link rel="icon" href="Immagini/favicon.ico" type="image/x-icon">    
     <link rel="stylesheet" href="./css/style_work.min.css" type="text/css">
+    <title>Work in Progress</title>
 </head>
 <body>
 

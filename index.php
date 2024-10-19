@@ -46,13 +46,14 @@ die();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Immagini/favicon.ico" type="image/x-icon">
     <title><?php echo htmlspecialchars($dati['titolo']); ?></title>
     <link rel="stylesheet" href="css/style_index.min.css" type="text/css">
 </head>
 <body>
 <img src="./Immagini/blue_elegante.jpg" alt="BG" width="100%" class="bg">
 
-<!-- BARRA DI NAVIGAZIONE -->
+<!-- BARRA DI NAVIGAZIONE ------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <header>
     <nav>
         <ul class="menu">
@@ -70,7 +71,7 @@ die();
     ?>
 </header>
 
-<!-- HOME -->
+<!-- HOME ------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <main>
     <img src="Immagini/Logo_Luca_2.webp" alt="logo" width="230" class="logo">
     <div class="presentazione">
@@ -104,7 +105,7 @@ die();
     <p class="lorem2"><?php echo htmlspecialchars($dati['par']); ?></p>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER ------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <footer>
     <div class="container">
         <div class="footer-contenuto">

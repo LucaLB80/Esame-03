@@ -155,17 +155,18 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti</title>
+    <link rel="icon" href="Immagini/favicon.ico" type="image/x-icon">    
     <link rel="stylesheet" href="./css/style_contatti.min.css" type="text/css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contatti</title>
     
 </head>
 <body>
 
     <img src="./Immagini/blue_elegante.jpg" alt="BG" width="100%" class="bg">
 
-    <!-- BARRA DI NAVIGAZIONE -->
+    <!-- BARRA DI NAVIGAZIONE ------------------------------------------------------------------------------------------------------------------------------------------------------------>
     <header>
         
         <nav>
@@ -179,7 +180,7 @@ try {
         </nav>
     </header>
 
-    <!-- HOME -->
+    <!-- HOME ------------------------------------------------------------------------------------------------------------------------------------------------------------>
     <img src="Immagini/Logo_Luca_2.webp" alt="logo" width="230" class="logo">
     <form action="contatti.php?inviato=1" method="POST" >
    
@@ -234,7 +235,7 @@ try {
         </fieldset>
     </form>
 
-    <!-- FOOTER -->
+    <!-- FOOTER ------------------------------------------------------------------------------------------------------------------------------------------------------------>
     <footer>
         <div class="container">
             <div class="footer-contenuto">
