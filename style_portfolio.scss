@@ -61,22 +61,53 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 10%;
-    @include impostaDim(100%,50px);
     background-color: $bg_2; 
     border-bottom: 1px solid #ffbb00;
-
-    // Stile base per piccoli schermi
     padding: 10px;
     flex-direction: column;
     @include impostaDim(100%, auto);
 
+    // Media query per schermi sotto i 375px
+    @media (max-width: 375px) {
+        padding: 20px;
+        @include impostaDim(100%, 130px);
+        flex-direction: column;
+    }
     // Media query per schermi da 375px a 480px
     @media (min-width: 375px) and (max-width: 480px) {
         padding: 20px;
         @include impostaDim(100%, 130px);
         flex-direction: column;
-
+    }
+    // Media query per schermi da 480px a 576px
+    @media (min-width: 480px) and (max-width: 576px) {
+        padding: 20px;
+        @include impostaDim(100%, 130px);
+        flex-direction: column;
+    }
+    // Media query per schermi da 576px a 768px
+    @media (min-width: 576px) and (max-width: 768px) {
+    padding: 20px;
+    @include impostaDim(100%, 130px);
+    flex-direction: column;
+    }
+    // Media query per schermi da 768px a 1023px
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding: 20px;
+        @include impostaDim(100%, 130px);
+        flex-direction: column;
+    }
+    // Media query per schermi da 1023px a 1280px
+    @media (min-width: 1023px) and (max-width: 1280px) {
+        padding: 20px;
+        @include impostaDim(100%, 130px);
+        flex-direction: column;
+    }
+    // Media query per schermi da 1280px a 1440px
+    @media (min-width: 1280px) and (max-width: 1440px) {
+        padding: 20px;
+        @include impostaDim(100%, 130px);
+        flex-direction: column;
     }
     .menu{
         font-weight: 300;
@@ -89,18 +120,48 @@ header{
         flex-direction: column;
         align-items: center;
         
-
-        // Uniformare il menu per schermi da 375px a 480px
+        // Media query per schermi sotto i 375px
+        @media (max-width: 375px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        // Media query per schermi da 375px a 480px
         @media (min-width: 375px) and (max-width: 480px) {
             margin-top: 0px;
             font-size: 20px;
         }
+        // Media query per schermi da 480px a 576px
+        @media (min-width: 480px) and (max-width: 576px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        // Media query per schermi da 576px a 768px
+        @media (min-width: 576px) and (max-width: 768px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        // Media query per schermi da 768px a 1023px
+        @media (min-width: 768px) and (max-width: 1023px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        // Media query per schermi da 1023px a 1280px
+        @media (min-width: 1023px) and (max-width: 1280px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        // Media query per schermi da 1280px a 1440px
+        @media (min-width: 1280px) and (max-width: 1440px) {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+    
         li{
             display: inline-block;
             padding: 10px;
             a{
                 font-weight: 300;
-                font-size: 2em;
+                font-size: 32px;
                 text-decoration: none;
                 color: $color2; 
                 transition: all .3s ease;
@@ -108,16 +169,45 @@ header{
                 &:hover{                   
                    color:$color;
                 }
-
-                // Uniformare la dimensione del testo per il range di schermi
+                // Media query per schermi sotto i 375px
+                @media (max-width: 375px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                // Media query per schermi da 375px a 480px
                 @media (min-width: 375px) and (max-width: 480px) {
                     font-size: 22px;
                     text-align: center;
                 }
+                // Media query per schermi da 480px a 576px
+                @media (min-width: 480px) and (max-width: 576px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                // Media query per schermi da 576px a 768px
+                @media (min-width: 576px) and (max-width: 768px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                // Media query per schermi da 768px a 1023px
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                // Media query per schermi da 1023px a 1280px
+                @media (min-width: 1023px) and (max-width: 1280px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                // Media query per schermi da 1280px a 1440px
+                @media (min-width: 1280px) and (max-width: 1440px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
             }
-            
         }
-    }   
+    }
+    
     div.button{
         padding: 9px 25px;
         @extend %b;
@@ -126,169 +216,514 @@ header{
         cursor: pointer;
         position: relative;   
         margin-top: 15px;
-
+        // Media query per schermi sotto i 375px
+        @media (max-width: 375px) {
+            margin-top: 0px;
+            padding: 0px 20px;
+            border-radius: 5px;
+        }
+        // Media query per schermi da 375px a 480px
         @media (min-width: 375px) and (max-width: 480px) {
             margin-top: 0px;
             padding: 0px 20px;
             border-radius: 5px;
         }
-
+        // Media query per schermi da 480px a 576px
+        @media (min-width: 480px) and (max-width: 576px) {
+            margin-top: 0px;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+        // Media query per schermi da 576px a 768px
+        @media (min-width: 576px) and (max-width: 768px) {
+            margin-top: 0px;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+        // Media query per schermi da 768px a 1023px
+        @media (min-width: 768px) and (max-width: 1023px) {
+            margin-top: 0px;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+        // Media query per schermi da 1023px a 1280px
+        @media (min-width: 1023px) and (max-width: 1280px) {
+            margin-top: 0px;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+        // Media query per schermi da 1280px a 1440px
+        @media (min-width: 1280px) and (max-width: 1440px) {
+            margin-top: 0px;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+    
         &:hover{
             @extend %h;
         }
-
+    
         a{
             font-size: 18px;
             color:$color2;
             text-decoration: none;
-
-            // Cambiare la dimensione del testo su schermi tra 375px e 480px
+            // Media query per schermi sotto i 375px
+            @media (max-width: 375px) {
+                font-size: 20px;
+            }
+            // Media query per schermi da 375px a 480px
             @media (min-width: 375px) and (max-width: 480px) {
                 font-size: 20px;
             }
+            // Media query per schermi da 480px a 576px
+            @media (min-width: 480px) and (max-width: 576px) {
+                font-size: 20px;
+            }
+            // Media query per schermi da 576px a 768px
+            @media (min-width: 576px) and (max-width: 768px) {
+                font-size: 20px;
+            }
+            // Media query per schermi da 768px a 1023px
+            @media (min-width: 768px) and (max-width: 1023px) {
+                font-size: 20px;
+            }
+            // Media query per schermi da 1023px a 1280px
+            @media (min-width: 1023px) and (max-width: 1280px) {
+                font-size: 20px;
+            }
+            // Media query per schermi da 1280px a 1440px
+            @media (min-width: 1280px) and (max-width: 1440px) {
+                font-size: 20px;
+            }
         }
-    }  
-
-}
+    }
+}    
 //*HOME*/-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-img.logo{
+img.logo {
     position: absolute;
     margin-left: 100px;
     margin-top: -287px;
-   
+    width: 180px;
 
-    @media (min-width: 375px) and (max-width: 480px) {
-        position: absolute;
+    // Media query per schermi sotto i 375px
+    @media (max-width: 375px) {
         display: none;  // Nascondere il logo per evitare sovrapposizioni
-        width: 110px;
-        margin: -159px 0 0 30px;
+    }
+    // Media query per schermi da 375px a 480px
+    @media (min-width: 375px) and (max-width: 480px) {
+        display: none;
+    }
+    // Media query per schermi da 480px a 576px
+    @media (min-width: 480px) and (max-width: 576px) {
+        display: none;
+    }
+    // Media query per schermi da 576px a 768px
+    @media (min-width: 576px) and (max-width: 768px) {
+        display: none;
+    }
+    // Media query per schermi da 768px a 1023px
+    @media (min-width: 768px) and (max-width: 1023px) {
+        display: none;
+    }
+    // Media query per schermi da 1023px a 1280px
+    @media (min-width: 1023px) and (max-width: 1280px) {
+        position: absolute;
+        width: 120px;
+        margin: -213px 0 0 20px;
+    }
+    // Media query per schermi da 1280px a 1440px
+    @media (min-width: 1280px) and (max-width: 1440px) {
+        position: absolute;
+        width: 140px;
+        margin: -213px 0 0 20px;
     }
 }
 
-h1{
+h1 {
     text-align: center;
     color: #ffffff;
     font-size: 70px;
-    @include imposta-margin(6%,0px,100px,0px);
+    @include imposta-margin(100px, 0px, 100px, 0px);
     text-shadow: 10px 10px 10px #000000, 15px 15px 15px #565656;
 
-   @media (min-width: 375px) and (max-width: 480px) {
+    // Media query per schermi sotto i 375px
+    @media (max-width: 375px) {
         font-size: 43px;
         height: auto;
-        @include imposta-margin(100px,13px,-30px,20px);
-        text-shadow: 10px 10px 10px #000000, 15px 15px 15px #565656;
-    } 
-}
-main{   
-    @include impostaDim(100%,auto);
-    @include imposta-margin(115px,0px,0px,0px);
-
+        @include imposta-margin(100px, 13px, -30px, 20px);
+    }
+    // Media query per schermi da 375px a 480px
     @media (min-width: 375px) and (max-width: 480px) {
-        @include impostaDim(100%,auto);
-       
-    }   
-    .container-home{
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(100px, 13px, -30px, 20px);
+    }
+    // Media query per schermi da 480px a 576px
+    @media (min-width: 480px) and (max-width: 576px) {
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(100px, 13px, -30px, 20px);
+    }
+    // Media query per schermi da 576px a 768px
+    @media (min-width: 576px) and (max-width: 768px) {
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(100px, 13px, -30px, 20px);
+    }
+    // Media query per schermi da 768px a 1023px
+    @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(100px, 13px, -30px, 20px);
+    }
+    // Media query per schermi da 1023px a 1280px
+    @media (min-width: 1023px) and (max-width: 1280px) {
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(135px, 13px, -59px, 20px);
+    }
+    // Media query per schermi da 1280px a 1440px
+    @media (min-width: 1280px) and (max-width: 1440px) {
+        font-size: 43px;
+        height: auto;
+        @include imposta-margin(135px, 13px, -59px, 20px);
+    }
+}
+
+main {
+    @include impostaDim(100%, auto);
+    @include imposta-margin(115px, 0px, 0px, 0px);
+
+    // Media query per schermi sotto i 375px
+    @media (max-width: 375px) {
+        @include impostaDim(100%, auto);
+    }
+    // Media query per schermi da 375px a 480px
+    @media (min-width: 375px) and (max-width: 480px) {
+        @include impostaDim(100%, auto);
+    }
+    // Media query per schermi da 480px a 576px
+    @media (min-width: 480px) and (max-width: 576px) {
+        @include impostaDim(100%, auto);
+    }
+    // Media query per schermi da 576px a 768px
+    @media (min-width: 576px) and (max-width: 768px) {
+        @include impostaDim(100%, auto);
+    }
+    // Media query per schermi da 768px a 1023px
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @include impostaDim(100%, auto);
+    }
+    // Media query per schermi da 1023px a 1280px
+    @media (min-width: 1023px) and (max-width: 1280px) {
+        @include impostaDim(100%, auto);
+    }
+    // Media query per schermi da 1280px a 1440px
+    @media (min-width: 1280px) and (max-width: 1440px) {
+        @include impostaDim(100%, auto);
+    }
+
+    .container-home {
         display: flex;
         justify-content: space-around;
-        align-items: center; 
-        @include impostaDim(96%,210px);  
+        align-items: center;
+        @include impostaDim(96%, 210px);
         border-radius: 40px;
         margin-left: 30px;
 
+        // Media query per schermi sotto i 375px
+        @media (max-width: 375px) {
+            justify-content: space-between;
+            flex-direction: column;
+            @include impostaDim(auto, 1050px);
+            @include imposta-margin(0px, 0px, 0px, 0px);
+        }
+        // Media query per schermi da 375px a 480px
         @media (min-width: 375px) and (max-width: 480px) {
             justify-content: space-between;
             flex-direction: column;
-            @include impostaDim(auto,1050px);     
-            @include imposta-margin(0px,0px,0px,0px);
-        } 
-        div{
-            @include impostaDim(150px,150px);
+            @include impostaDim(auto, 1050px);
+            @include imposta-margin(0px, 0px, 0px, 0px);
+        }
+        // Media query per schermi da 480px a 576px
+        @media (min-width: 480px) and (max-width: 576px) {
+            justify-content: space-between;
+            flex-direction: column;
+            @include impostaDim(auto, 1050px);
+            @include imposta-margin(0px, 0px, 0px, 0px);
+        }
+        // Media query per schermi da 576px a 768px
+        @media (min-width: 576px) and (max-width: 768px) {
+            justify-content: space-between;
+            flex-direction: column;
+            @include impostaDim(auto, 1050px);
+            @include imposta-margin(0px, 0px, 0px, 0px);
+        }
+        // Media query per schermi da 768px a 1023px
+        @media (min-width: 768px) and (max-width: 1023px) {
+            justify-content: space-between;
+            flex-direction: column;
+            @include impostaDim(auto, 1050px);
+            @include imposta-margin(0px, 0px, 0px, 0px);
+        }
+        // Media query per schermi da 1023px a 1280px
+        @media (min-width: 1023px) and (max-width: 1280px) {           
+            @include impostaDim(auto, auto);
+            @include imposta-margin(0, 0, 159px, 0);
+        }
+        // Media query per schermi da 1280px a 1440px
+        @media (min-width: 1280px) and (max-width: 1440px) {
+            @include impostaDim(auto, auto);
+            @include imposta-margin(0, 0, 159px, 0);
+        }
+
+        div {
+            @include impostaDim(150px, 150px);
             background-color: #2d2d2d7f;
+            display: flex;  // Centrare contenuto e testo
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            line-height: 150px;
             border-radius: 30px;
             border: 2px solid white;
             box-shadow: 10px 10px 10px #000000af;
 
-            @media (min-width: 375px) and (max-width: 480px) {
-                @include impostaDim(260px,150px);
-                line-height: 40px;
+            // Media query per schermi sotto i 375px
+            @media (max-width: 375px) {
+                @include impostaDim(260px, 150px);
                 border-radius: 15px;
                 box-shadow: 15px 15px 15px #000000af;
                 margin-top: 30px;
             }
-            &:hover{
+            // Media query per schermi da 375px a 480px
+            @media (min-width: 375px) and (max-width: 480px) {
+                @include impostaDim(260px, 150px);
+                border-radius: 15px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 30px;
+            }
+            // Media query per schermi da 480px a 576px
+            @media (min-width: 480px) and (max-width: 576px) {
+                @include impostaDim(260px, 150px);
+                border-radius: 15px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 30px;
+            }
+            // Media query per schermi da 576px a 768px
+            @media (min-width: 576px) and (max-width: 768px) {
+                @include impostaDim(260px, 150px);
+                border-radius: 15px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 30px;
+            }
+            // Media query per schermi da 768px a 1023px
+            @media (min-width: 768px) and (max-width: 1023px) {
+                @include impostaDim(260px, 150px);
+                border-radius: 15px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 30px;
+            }
+            // Media query per schermi da 1023px a 1280px
+            @media (min-width: 1023px) and (max-width: 1280px) {
+                @include impostaDim(100px, 100px);
+                border-radius: 29px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 85px;
+            }
+            // Media query per schermi da 1280px a 1440px
+            @media (min-width: 1280px) and (max-width: 1440px) {
+                @include impostaDim(10%, 100px);
+                border-radius: 29px;
+                box-shadow: 15px 15px 15px #000000af;
+                margin-top: 85px;
+            }
+
+            &:hover {
                 cursor: pointer;
                 background-size: cover;
-                background-position: center; 
+                background-position: center;
                 object-position: bottom;
                 background-image: url('../Immagini/portfolio.jpg');
             }
-            a{
+
+            a {
                 color: $color2;
                 text-decoration: none;
+                font-size: 15px;
 
-                @media (min-width: 375px) and (max-width: 480px) {
-                    font-size: 15px;
-                    position:absolute;
-                    @include imposta-margin(53px,0px,0px,-27px);
-                }
-                &:hover{
-                    -webkit-text-fill-color:$color2;
+                &:hover {
+                    -webkit-text-fill-color: $color2;
                     -webkit-text-stroke: 1px rgb(0, 0, 0);
                 }
             }
         }
-        
-     }  
+    }
 }
 
 //*FOOTER*/-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-footer{
-    background-color:$bg_2;  
+footer {
+    background-color: $bg_2;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 180px;
+    border-top: 1px solid #ffbb00;
 
-    @media (min-width: 375px) and (max-width: 480px) {
-        @include imposta-margin(75px, 0, 0, 0);
-        @include impostaDim(100%, 80%);
-
-        border-top: 1px solid #ffbb00;
-
-
+    // Media query per schermi sotto i 375px
+    @media (max-width: 375px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
     }
-    .container{        
-        margin: 60px;
+    // Media query per schermi da 375px a 480px
+    @media (min-width: 375px) and (max-width: 480px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
+    }
+    // Media query per schermi da 480px a 576px
+    @media (min-width: 480px) and (max-width: 576px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
+    }
+    // Media query per schermi da 576px a 768px
+    @media (min-width: 576px) and (max-width: 768px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
+    }
+     // Media query per schermi da 768px a 1023px
+     @media (min-width: 768px) and (max-width: 1023px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
+    }
+    // Media query per schermi da 1023px a 1280px
+    @media (min-width: 1023px) and (max-width: 1280px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
+    }
+    // Media query per schermi da 1280px a 1440px
+    @media (min-width: 1280px) and (max-width: 1440px) {
+        @include imposta-margin(100px, 0, 0, 0);
+        
+    }
+    .container {        
+        margin: 0;
         display: flex;
         justify-content: center;
 
+        // Media query per schermi sotto i 375px
+        @media (max-width: 375px) {
+            @include imposta-margin(0, 0, 0, 0);
+        }
+        // Media query per schermi da 375px a 480px
         @media (min-width: 375px) and (max-width: 480px) {
-            @include imposta-margin(20px, 0, 0, 0);
+           @include imposta-margin(0, 0, 0, 0);
+        
+        }
+        // Media query per schermi da 480px a 576px
+        @media (min-width: 480px) and (max-width: 576px) {
+           @include imposta-margin(13px, 0, 0, 0);
+        
+        }
+        // Media query per schermi da 576px a 768px
+        @media (min-width: 576px) and (max-width: 768px) {
+           @include imposta-margin(0, 0, 0, 0);
+        
+        }
+         // Media query per schermi da 768px a 1023px
+         @media (min-width: 768px) and (max-width: 1023px) {
+            @include imposta-margin(0, 0, 0, 0);
+        }
+        // Media query per schermi da 1023px a 1280px
+        @media (min-width: 1023px) and (max-width: 1280px) {
+            @include imposta-margin(0, 0, 0, 0);
+        }
+        // Media query per schermi da 1280px a 1440px
+        @media (min-width: 1280px) and (max-width: 1440px) {
+            @include imposta-margin(0, 0, 0, 0);
         }
 
-        .footer-contenuto{
-            @include impostaDim(33.3%,100px);
-            margin-top: 49px;
+        .footer-contenuto {
+            @include impostaDim(33.3%, 100px);
+            margin-top: 25px;
+                // Media query per schermi sotto i 375px
+                @media (max-width: 375px) {
+                @include impostaDim(100%, 180px);
+                @include imposta-margin(0, 0, 0, 0);
+                }
 
-            @media (min-width: 375px) and (max-width: 480px) {
-                @include impostaDim(100%, 158px);
-                @include imposta-margin(5%, 0, 0, 0);
-            }
+                // Media query per schermi da 375px a 480px
+                @media (min-width: 375px) and (max-width: 480px) {
+                    @include impostaDim(100%, 180px);
+                @include imposta-margin(0, 0, 0, 0);
+                }
+                // Media query per schermi da 480px a 576px
+                @media (min-width: 480px) and (max-width: 576px) {
+                    @include impostaDim(100%, 185px);
+                @include imposta-margin(0, 0, 0, 0);
+                }
+                // Media query per schermi da 576px a 768px
+                @media (min-width: 576px) and (max-width: 768px) {
+                    @include impostaDim(100%, 190px);
+                @include imposta-margin(15px, 0, 0, 0);
+                }
+                // Media query per schermi da 768px a 1023px
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    @include impostaDim(33.3%, 180px);
+                   @include imposta-margin(15px, 0, 0, 0);
+                }
+                // Media query per schermi da 1023px a 1280px
+                @media (min-width: 1023px) and (max-width: 1280px) {
+                    @include impostaDim(33.3%, 180px);
+                   @include imposta-margin(15px, 0, 0, 0);
+                }
+                // Media query per schermi da 1280px a 1440px
+                @media (min-width: 1280px) and (max-width: 1440px) {
+                    @include impostaDim(33.3%, 180px);
+                   @include imposta-margin(15px, 0, 0, 0);
+                }
 
-            #contact{
+
+            #contact {
                 font-size: 28px;
                 margin-bottom: 15px;
                 text-align: center;
                 color: $color2;
 
-               @media (min-width: 375px) and (max-width: 480px) {
-                    margin: -10% 0 0 -3%;
-                    padding: 3%;
-                    
-                }
+                    // Media query per schermi sotto i 375px
+                    @media (max-width: 375px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px;                   
+                    }
+                    // Media query per schermi da 375px a 480px
+                    @media (min-width: 375px) and (max-width: 480px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px;     
+                    }              
+                    // Media query per schermi da 480px a 576px
+                    @media (min-width: 480px) and (max-width: 576px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px;  
+                    }
+                    // Media query per schermi da 576px a 768px
+                    @media (min-width: 576px) and (max-width: 768px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px;  
+                    }
+                    // Media query per schermi da 768px a 1023px
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px;  
+                    }
+                    // Media query per schermi da 1023px a 1280px
+                    @media (min-width: 1023px) and (max-width: 1280px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px; 
+                    }
+                    // Media query per schermi da 1280px a 1440px
+                    @media (min-width: 1280px) and (max-width: 1440px) {
+                        margin: 0 0 0 0 ;
+                        padding: 10px;  
+                    }                
             }
 
-            p{
+            p {
                 width: 180px;
                 margin: auto;
                 padding: 7px;
@@ -315,28 +750,73 @@ footer{
             
             // }
 
-            ul{
+            ul {
                 text-align: center;
-                padding: 5px;                
+                padding: 5px;
             }
-        }    
+        }
+    
+
         .footer-contenuto_1 {
             @include impostaDim(33.3%, 100px);
-            margin-top: 49px;
-            // Nascondere l'intero contenuto nella media query
-            @media (min-width: 375px) and (max-width: 480px) {
+            margin-top: 25px;
+            // Media query per schermi sotto i 375px
+            @media (max-width: 375px) {
                 display: none;
             }
-            #list{
+            // Media query per schermi da 375px a 768px
+            @media (min-width: 375px) and (max-width: 768px) {
+                display: none;
+            }
+            // Media query per schermi da 768px a 1023px
+            @media (min-width: 768px) and (max-width: 1023px) {
+                @include impostaDim(33.3%, auto);
+                @include imposta-margin(15px, 0, 0, 0);
+            }
+            // Media query per schermi da 1023px a 1280px
+            @media (min-width: 1023px) and (max-width: 1280px) {
+                @include impostaDim(33.3%, auto);
+                @include imposta-margin(15px, 0, 0, 0);
+            }
+            // Media query per schermi da 1280px a 1440px
+            @media (min-width: 1280px) and (max-width: 1440px) {
+                @include impostaDim(33.3%, auto);
+                @include imposta-margin(15px, 0, 0, 0);
+            }
+                
+            #list {
                 font-size: 28px;
                 margin-bottom: 15px;
                 text-align: center;
                 color: $color2;
 
+                // Media query per schermi da 375px a 480px
                 @media (min-width: 375px) and (max-width: 480px) {
-                    margin: -10% 0 0 -3%;
-                    padding: 3%;
+                    margin: 0 0 0 0;                    
+                }
+                // Media query per schermi da 480px a 576px
+                @media (min-width: 480px) and (max-width: 576px) {
+                    margin: 0 0 0 0;                    
+                }
+                // Media query per schermi da 576px a 768px
+                @media (min-width: 576px) and (max-width: 768px) {
+                    margin: 0 0 0 0;
                     
+                }
+                // Media query per schermi da 768px a 1023px
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    margin: 0 0 0 0;
+                           
+                }
+                // Media query per schermi da 1023px a 1280px
+                @media (min-width: 1023px) and (max-width: 1280px) {
+                    margin: 0 0 0 0;
+                                        
+                }
+                // Media query per schermi da 1280px a 1440px
+                @media (min-width: 1280px) and (max-width: 1440px) {            
+                    margin: 0 0 0 0;
+                                     
                 }
             }
             ul.list{
@@ -367,55 +847,156 @@ footer{
     
                 &:hover::before {
                     width: 70px;
-                }            
-
+                }
             }
-        }   
+        }
+
         .footer-contenuto_2 {
             @include impostaDim(33.3%, 100px);
-            margin-top: 49px;
-            // Nascondere l'intero contenuto nella media query
-            @media (min-width: 375px) and (max-width: 480px) {
+            margin-top: 25px;
+
+            // Media query per schermi sotto i 375px
+            @media (max-width: 375px) {
                 display: none;
-            } 
+            }
+            // Media query per schermi da 375px a 768px
+            @media (min-width: 375px) and (max-width: 768px) {
+                display: none;
+            }
+             // Media query per schermi da 768px a 1023px
+             @media (min-width: 768px) and (max-width: 1023px) {
+                @include impostaDim(33.3%, auto);
+                @include imposta-margin(15px, 0, 0, 0);
+            }
+            // Media query per schermi da 1023px a 1280px
+            @media (min-width: 1023px) and (max-width: 1280px) {
+                @include impostaDim(33.3%, auto);
+                @include imposta-margin(15px, 0, 0, 0);
+            }
+            // Media query per schermi da 1280px a 1440px
+            @media (min-width: 1280px) and (max-width: 1440px) {
+                @include impostaDim(33.3%, auto);
+                @include imposta-margin(15px, 0, 0, 0);
+            }
             .logo2{
                 position: relative;
-                left: 200px;
-                top: 40px;
-                width: 20%;
+                left: 220px;
+                top: 0;
+                width: 150px;
+                // Media query per schermi sotto i 375px
+                @media (max-width: 375px) {
+                    display: none;
+                }
+                // Media query per schermi da 375px a 480px
+                @media (min-width: 375px) and (max-width: 480px) {
+                    display: none;
+                }
+                // Media query per schermi da 480px a 576px
+                @media (min-width: 480px) and (max-width: 576px) {
+                    display: none;
+                }
+                // Media query per schermi da 576px a 768px
+                @media (min-width: 576px) and (max-width: 768px) {
+                    display: none;
+                }
+                // Media query per schermi da 768px a 1023px
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    left: 100px;
+                    top: 40px;
+                    width: 100px;
+                }
+                // Media query per schermi da 1023px a 1280px
+                @media (min-width: 1023px) and (max-width: 1280px) {
+                    left: 100px;
+                    top: 40px;
+                    width: 120px;
+                }
+                // Media query per schermi da 1280px a 1440px
+                @media (min-width: 1280px) and (max-width: 1440px) {
+                    left: 100px;
+                    top: 40px;
+                    width: 140px;
+                }
+            }
+        }
+        a.privacy_policy {
+            display: inline;
+            font-size: 18px;
+            color: $color2;
+            text-decoration: none;
+            margin: 198px 0 0 0;
+            cursor: pointer;
+            position: absolute;
+    
+                // Media query per schermi sotto i 375px
+                @media (max-width: 375px) {
+                    margin: 168px 0 0 0;
+                }
+                // Media query per schermi da 375px a 480px
+                @media (min-width: 375px) and (max-width: 480px) {
+                    margin: 174px 0 0 0;
+                }
+                // Media query per schermi da 480px a 576px
+                @media (min-width: 480px) and (max-width: 576px) {
+                    margin: 177px 0 0 0;
+                }
+                // Media query per schermi da 576px a 768px
+                @media (min-width: 576px) and (max-width: 768px) {
+                    margin: 197px 0 0 0;
+                }
+                // Media query per schermi da 768px a 1023px
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    margin: 185px 0 0 0;
+                }
+                // Media query per schermi da 1023px a 1280px
+                @media (min-width: 1023px) and (max-width: 1280px) {
+                    margin: 177px 0 0 0;
+                }
+                // Media query per schermi da 1280px a 1440px
+                @media (min-width: 1280px) and (max-width: 1440px) {
+                    margin: 177px 0 0 0;
+                }
+            &:hover {
+                color: $bg-hover_sec;
             }
         }
     }
-
-    .bottom-bar{
-        @extend %b;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 105px; 
-
+}
+.bottom-bar {
+    @extend %b;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 105px;
+        // Media query per schermi sotto i 375px
+        @media (max-width: 375px) {
+            @include imposta-margin(23px, 0, 0, 0);
+        }
+        // Media query per schermi da 375px a 480px
         @media (min-width: 375px) and (max-width: 480px) {
             @include imposta-margin(23px, 0, 0, 0);
         }
-    }
-    a.privacy_policy {
-        display: inline;
-        font-size: 15px;
-        color:$color2;
-        text-decoration: none;
-        margin: 226px 0px 0px 0px;
-        cursor: pointer;
-        position: absolute;
-
-        @media (min-width: 375px) and (max-width: 480px) {
-            margin: 168px 0 0 0;
+        // Media query per schermi da 480px a 576px
+        @media (min-width: 480px) and (max-width: 576px) {
+            @include imposta-margin(23px, 0, 0, 0);
         }
-            &:hover{
-                color: $bg-hover_sec;
-            } 
-
-    }
-        
+        // Media query per schermi da 576px a 768px
+        @media (min-width: 576px) and (max-width: 768px) {
+            @include imposta-margin(23px, 0, 0, 0);
+        }
+        // Media query per schermi da 768px a 1023px
+        @media (min-width: 768px) and (max-width: 1023px) {
+            @include imposta-margin(23px, 0, 0, 0);
+        }
+        // Media query per schermi da 1023px a 1280px
+        @media (min-width: 1023px) and (max-width: 1280px) {
+            @include imposta-margin(23px, 0, 0, 0);
+        }
+        // Media query per schermi da 1280px a 1440px
+        @media (min-width: 1280px) and (max-width: 1440px) {
+            @include imposta-margin(23px, 0, 0, 0);
+        }
 }
+
 
 
 

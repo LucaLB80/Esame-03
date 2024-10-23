@@ -155,10 +155,20 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Immagini/favicon.ico" type="image/x-icon">    
+    <!-- Favicon -->
+    <link rel="icon" href="Favicon/favicon_16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="Favicon/favicon_32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="Favicon/favicon_48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="Favicon/favicon_64x64.png" type="image/png" sizes="64x64">
+    <link rel="icon" href="Favicon/favicon_128x128.png" type="image/png" sizes="128x128">
+    <link rel="icon" href="Favicon/favicon_192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="Favicon/favicon_256x256.png" type="image/png" sizes="256x256">
+    <link rel="icon" href="Favicon/favicon_512x512.png" type="image/png" sizes="512x512">
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style_contatti.min.css" type="text/css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <title>Contatti</title>
     
 </head>

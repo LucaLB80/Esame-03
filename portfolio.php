@@ -59,8 +59,18 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Immagini/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="Favicon/favicon_16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="Favicon/favicon_32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="Favicon/favicon_48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="Favicon/favicon_64x64.png" type="image/png" sizes="64x64">
+    <link rel="icon" href="Favicon/favicon_128x128.png" type="image/png" sizes="128x128">
+    <link rel="icon" href="Favicon/favicon_192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="Favicon/favicon_256x256.png" type="image/png" sizes="256x256">
+    <link rel="icon" href="Favicon/favicon_512x512.png" type="image/png" sizes="512x512">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style_portfolio.min.css" type="text/css">
+    
     <title>Portfolio</title>
 </head>
 <body>
@@ -115,8 +125,9 @@ try {
                                         printf('<li><a href="%s" title="%s" >%s</a></li>' ,$link["href"],$link["title"],$link["testo"]);
                                     }
                             }
-                    ?> 
-                </div>
+                        ?> 
+                       
+                </div>               
                 <div class="footer-contenuto_1">
                    <h3 id="list">Quick Links</h3>
                      <ul class="list">
@@ -129,11 +140,9 @@ try {
                </div>
                 <div class="footer-contenuto_2">
                     <img src="Immagini/Logo_Luca_2.webp" alt="logo" width="180" class="logo2">
-                </div>
-            
-                <a class="privacy_policy" href="privacy_policy.html"><p>Privacy Policy</p></a>
-                
-            </div>
+                </div>            
+                <a class="privacy_policy" href="privacy_policy.html"><p>Privacy Policy</p></a>       
+               </div>
             <div class="bottom-bar">
                 <p>&copy; 2024. All rights reserved</p>
             </div>
